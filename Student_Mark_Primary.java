@@ -1,13 +1,29 @@
 package org.deloitte.sms.studentstaffdetailsmanagement.beans;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="STUDENT_MARK_PRIMARY")
 public class Student_Mark_Primary {
+	    @Id
+	    @Column (length=5)
         private String student_Id;
+	    @Column
         private int english_Mark;
+	    @Column
         private int hindi_Mark;
+	    @Column
         private int science_Mark;
+	    @Column
         private int math_Mark;
+	    @Column
         private int total_Mark;
+	    @Column
         private int average_Mark;
+	    @Column (length=3)
         private String grade;
 		public String getStudent_Id() {
 			return student_Id;
